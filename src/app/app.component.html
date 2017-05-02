@@ -1,0 +1,63 @@
+<md-toolbar layout="row" class="md-toolbar-tools">
+  <button md-button class="menu md-icon-button" hide-gt-sm ng-click="toggleList()">
+    <md-icon>menu</md-icon>
+  </button>
+  <h1>Angular Material</h1>
+</md-toolbar>
+
+<div flex layout="row">
+  <md-sidenav class="md-whiteframe-4dp" md-is-locked-open="$mdMedia('gt-sm')" md-component-id="left" ng-click="toggleList()">
+    <md-list>
+
+      <md-list-item>
+        <a routerLink="/home" class="md-button" data-ui-sref-active="md-warn">
+          <md-icon>home</md-icon> Home
+        </a>
+      </md-list-item>
+
+      <md-list-item>
+<!--        <a routerLink="/movies" class="md-button" data-ui-sref-active="md-warn">
+          <md-icon>info</md-icon> Movies list
+        </a>-->
+      </md-list-item>
+
+    </md-list>
+  </md-sidenav>
+
+  <router-outlet></router-outlet>
+
+
+</div>
+
+
+<br><br><br><br><br><br><br><br><br>
+<div>
+  <md-toolbar color="primary">
+    <span><md-icon>mood</md-icon></span>
+    <span>Yay, Material in Angular 4!</span>
+  </md-toolbar>
+
+  <md-sidenav-container>
+    <md-sidenav>
+      <!-- sidenav content -->
+      <a routerLink="/home" class="md-button" data-ui-sref-active="md-warn">
+        <md-icon>home</md-icon> Home asd
+      </a>
+    </md-sidenav>
+
+    <!-- primary content -->
+  </md-sidenav-container>
+  <md-sidenav-container class="example-container">
+    <md-sidenav #sidenav class="example-sidenav">
+      Jolly good!
+    </md-sidenav>
+
+    <div class="example-sidenav-content">
+      <button md-button (click)="sidenav.open()">
+        Open sidenav
+      </button>
+    </div>
+
+  </md-sidenav-container>
+
+</div>
