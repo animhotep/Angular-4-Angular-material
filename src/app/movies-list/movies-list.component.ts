@@ -10,7 +10,7 @@ import {Http} from "@angular/http";
 })
 
 export class MoviesListComponent implements OnInit {
-  movies;
+  movies: object;
 
   constructor(
     private route: ActivatedRoute,
@@ -27,8 +27,6 @@ export class MoviesListComponent implements OnInit {
         data => this.movies = data.results,
         err => console.log(err)
       );
-
-
   }
 
 }

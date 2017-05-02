@@ -1,5 +1,16 @@
-
-{{id}}
-<p>
-  movie works!
-</p>
+<div *ngIf="movie">
+  <h1>{{movie.title}}</h1>
+  {{movie.overview}}
+  <p>
+    <img src="http://image.tmdb.org/t/p/w185/{{movie.poster_path}}" alt="">
+  </p>
+  <p>
+    homepage: <a href="{{movie.homepage}}" target="_blank">{{movie.homepage}}</a>
+  </p>
+  <p>
+    budget: {{movie.budget}}
+  </p>
+  <p>
+    popularity: {{movie.popularity}}
+  </p>
+</div>
