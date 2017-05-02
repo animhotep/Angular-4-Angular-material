@@ -1,28 +1,26 @@
+<md-toolbar color="primary" class="mat-elevation-z6">
+  <button md-icon-button (click)="sidenav.open()"><md-icon>mood</md-icon></button>
+  <button md-icon-button (click)="sidenav.close()"><md-icon>close</md-icon></button>
+  <span>Yay, Material in Angular 4!</span>
+</md-toolbar>
 
+<md-sidenav-container class="example-container">
+  <md-sidenav #sidenav  mode="side" opened="true">
 
-  <md-toolbar color="primary" class="mat-elevation-z6">
-    <button md-icon-button (click)="sidenav.open()"><md-icon>mood</md-icon></button>
-    <button md-icon-button (click)="sidenav.close()"><md-icon>close</md-icon></button>
-    <span>Yay, Material in Angular 4!</span>
-  </md-toolbar>
+    <md-list>
+      <md-list-item>
+        <a routerLink="/" md-button routerLinkActive="active">
+          <md-icon>home</md-icon> Home
+        </a>
+      </md-list-item>
 
-  <md-sidenav-container class="example-container">
-    <md-sidenav #sidenav  mode="side" opened="true">
+      <md-list-item>
+        <a routerLink="/movies" md-button routerLinkActive="active">
+          <md-icon>info</md-icon>  Movies list
+        </a>
+      </md-list-item>
+    </md-list>
+  </md-sidenav>
 
-      <md-list>
-        <md-list-item>
-          <a routerLink="/" class="md-button" data-ui-sref-active="md-warn">
-            Home
-          </a>
-        </md-list-item>
-
-        <md-list-item>
-          <a routerLink="/movies" class="md-button" data-ui-sref-active="md-warn">
-            Movies list
-          </a>
-        </md-list-item>
-      </md-list>
-    </md-sidenav>
-
-    <router-outlet></router-outlet>
-  </md-sidenav-container>
+  <router-outlet></router-outlet>
+</md-sidenav-container>
