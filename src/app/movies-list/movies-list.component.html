@@ -1,3 +1,21 @@
-<p>
-  movies-list works!
-</p>
+<h1>The most popular movies</h1>
+
+<md-grid-list cols="2" rowHeight="2:1" gutterSize="20px">
+  <md-grid-tile *ngFor="let movie of movies">
+    <md-card>
+      <a routerLink="{{movie.id}}">
+        <img md-card-lg-image src="http://image.tmdb.org/t/p/w185/{{movie.poster_path}}" alt="">
+      </a>
+      <md-card-content>
+        <span class="md-headline">{{movie.title}}</span>
+        <br>
+        <span class="md-subhead">{{movie.overview}}</span>
+      </md-card-content>
+
+      <md-card-actions>
+        <a routerLink="{{movie.id}}" md-button>Details</a>
+      </md-card-actions>
+    </md-card>
+  </md-grid-tile>
+
+</md-grid-list>
