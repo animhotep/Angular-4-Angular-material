@@ -3,21 +3,24 @@ import {NgModule, Component} from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
-
-
 import { AppComponent } from './app.component';
-
 import { MaterialModule } from '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import 'hammerjs';
+import { MoviesListComponent } from './movies-list/movies-list.component';
+import { MovieComponent } from './movie/movie.component';
+
 
 const routes: Routes = [
-  { path: 'home',  component: AppComponent },
+  { path: 'movies',  component: MoviesListComponent, data: { title: 'Movies list' } },
+  { path: 'movies/:id',  component: MovieComponent, data: { title: 'Movie ' }  }
 ];
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    MoviesListComponent,
+    MovieComponent
   ],
   imports: [
     BrowserModule,
