@@ -1,16 +1,17 @@
-<div *ngIf="movie">
+<md-list *ngIf="movie">
   <h1>{{movie.title}}</h1>
-  {{movie.overview}}
-  <p>
-    <img src="http://image.tmdb.org/t/p/w185/{{movie.poster_path}}" alt="">
-  </p>
-  <p>
+
+  <md-list-item>{{movie.overview}}</md-list-item>
+
+  <img src="http://image.tmdb.org/t/p/w185/{{movie.poster_path}}" alt="">
+
+  <md-list-item >
     homepage: <a href="{{movie.homepage}}" target="_blank">{{movie.homepage}}</a>
-  </p>
-  <p>
+  </md-list-item>
+  <md-list-item>
     budget: {{movie.budget}}
-  </p>
-  <p>
+  </md-list-item>
+  <md-list-item>
     popularity: {{movie.popularity}}
-  </p>
-</div>
+  </md-list-item>
+</md-list>

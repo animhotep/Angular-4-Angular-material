@@ -1,5 +1,7 @@
 <h1>The most popular movies</h1>
 
+<h2 *ngIf="!movies">loading movies...</h2>
+
 <md-card *ngFor="let movie of movies" class="movie-card">
   <md-card-header>
     <md-card-title><h2>{{movie.title}}</h2></md-card-title>
