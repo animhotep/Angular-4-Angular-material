@@ -4,13 +4,13 @@ import { Title }     from '@angular/platform-browser';
 import {Http} from "@angular/http";
 
 @Component({
-  selector: 'app-movie',
   templateUrl: './movie.component.html',
   styleUrls: ['./movie.component.css']
 })
+
 export class MovieComponent implements OnInit {
   id: number;
-  movie;
+  movie: Movie;
 
   constructor(
     private route: ActivatedRoute,
@@ -35,4 +35,13 @@ export class MovieComponent implements OnInit {
       );
   }
 
+}
+
+export class Movie{
+  id: number;
+  title: string;
+  poster_path: string;
+  homepage: string;
+  budget: number;
+  popularity: number;
 }

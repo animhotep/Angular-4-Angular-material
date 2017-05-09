@@ -13,14 +13,14 @@ import { MovieComponent } from './movie/movie.component';
 
 const routes: Routes = [
   { path: 'movies',  component: MoviesListComponent, data: { title: 'Movies list' } },
-  { path: 'movies/:id',  component: MovieComponent, data: { title: 'Movie ' }  }
+  { path: 'movies/:id',  component: MovieComponent, data: { title: 'Movie ' }  },
 ];
 
 @NgModule({
   declarations: [
     AppComponent,
     MoviesListComponent,
-    MovieComponent
+    MovieComponent,
   ],
   imports: [
     BrowserModule,

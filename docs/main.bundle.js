@@ -66,7 +66,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 var routes = [
     { path: 'movies', component: __WEBPACK_IMPORTED_MODULE_9__movies_list_movies_list_component__["a" /* MoviesListComponent */], data: { title: 'Movies list' } },
-    { path: 'movies/:id', component: __WEBPACK_IMPORTED_MODULE_10__movie_movie_component__["a" /* MovieComponent */], data: { title: 'Movie ' } }
+    { path: 'movies/:id', component: __WEBPACK_IMPORTED_MODULE_10__movie_movie_component__["a" /* MovieComponent */], data: { title: 'Movie ' } },
 ];
 var AppModule = (function () {
     function AppModule() {
@@ -78,7 +78,7 @@ AppModule = __decorate([
         declarations: [
             __WEBPACK_IMPORTED_MODULE_5__app_component__["a" /* AppComponent */],
             __WEBPACK_IMPORTED_MODULE_9__movies_list_movies_list_component__["a" /* MoviesListComponent */],
-            __WEBPACK_IMPORTED_MODULE_10__movie_movie_component__["a" /* MovieComponent */]
+            __WEBPACK_IMPORTED_MODULE_10__movie_movie_component__["a" /* MovieComponent */],
         ],
         imports: [
             __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
@@ -106,6 +106,7 @@ AppModule = __decorate([
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_platform_browser__ = __webpack_require__(8);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_http__ = __webpack_require__(28);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MovieComponent; });
+/* unused harmony export Movie */
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -141,12 +142,17 @@ var MovieComponent = (function () {
 }());
 MovieComponent = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_1" /* Component */])({
-        selector: 'app-movie',
         template: __webpack_require__(167),
         styles: [__webpack_require__(162)]
     }),
     __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* ActivatedRoute */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_router__["b" /* ActivatedRoute */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2__angular_platform_browser__["h" /* Title */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_platform_browser__["h" /* Title */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3__angular_http__["b" /* Http */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__angular_http__["b" /* Http */]) === "function" && _c || Object])
 ], MovieComponent);
+
+var Movie = (function () {
+    function Movie() {
+    }
+    return Movie;
+}());
 
 var _a, _b, _c;
 //# sourceMappingURL=movie.component.js.map
@@ -162,6 +168,7 @@ var _a, _b, _c;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_router__ = __webpack_require__(38);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_http__ = __webpack_require__(28);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MoviesListComponent; });
+/* unused harmony export Movie */
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -198,6 +205,12 @@ MoviesListComponent = __decorate([
     }),
     __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__angular_router__["b" /* ActivatedRoute */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__angular_router__["b" /* ActivatedRoute */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__["h" /* Title */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__["h" /* Title */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3__angular_http__["b" /* Http */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__angular_http__["b" /* Http */]) === "function" && _c || Object])
 ], MoviesListComponent);
+
+var Movie = (function () {
+    function Movie() {
+    }
+    return Movie;
+}());
 
 var _a, _b, _c;
 //# sourceMappingURL=movies-list.component.js.map
@@ -278,7 +291,7 @@ module.exports = module.exports.toString();
 /***/ 166:
 /***/ (function(module, exports) {
 
-module.exports = "<md-toolbar color=\"primary\" class=\"mat-elevation-z6\">\n  <button md-icon-button (click)=\"sidenav.open()\"><md-icon>mood</md-icon></button>\n  <button md-icon-button (click)=\"sidenav.close()\"><md-icon>close</md-icon></button>\n  <span>Yay, Material in Angular 4!</span>\n</md-toolbar>\n\n<md-sidenav-container class=\"example-container\">\n  <md-sidenav #sidenav  mode=\"side\" opened=\"true\">\n\n    <md-list>\n      <md-list-item>\n        <a routerLink=\"/\" md-button routerLinkActive=\"active\">\n          <md-icon>home</md-icon> Home\n        </a>\n      </md-list-item>\n\n      <md-list-item>\n        <a routerLink=\"/movies\" md-button routerLinkActive=\"active\">\n          <md-icon>info</md-icon>  Movies list\n        </a>\n      </md-list-item>\n    </md-list>\n  </md-sidenav>\n\n  <router-outlet></router-outlet>\n</md-sidenav-container>\n"
+module.exports = "<md-toolbar color=\"primary\" class=\"mat-elevation-z6\">\n  <button md-icon-button (click)=\"sidenav.open()\"><md-icon>mood</md-icon></button>\n  <button md-icon-button (click)=\"sidenav.close()\"><md-icon>close</md-icon></button>\n  <span>Yay, Material in Angular 4!</span>\n</md-toolbar>\n\n<md-sidenav-container class=\"example-container\">\n  <md-sidenav #sidenav  mode=\"side\" opened=\"true\">\n    <md-list>\n      <md-list-item>\n        <a routerLink=\"/\" md-button routerLinkActive=\"active\">\n          <md-icon>home</md-icon> Home\n        </a>\n      </md-list-item>\n\n      <md-list-item>\n        <a routerLink=\"/movies\" md-button routerLinkActive=\"active\">\n          <md-icon>info</md-icon>  Movies list\n        </a>\n      </md-list-item>\n\n      <md-list-item>\n        <a routerLink=\"/t\" md-button routerLinkActive=\"active\">\n          <md-icon>info</md-icon>  tttt list\n        </a>\n      </md-list-item>\n    </md-list>\n  </md-sidenav>\n\n  <router-outlet></router-outlet>\n</md-sidenav-container>\n"
 
 /***/ }),
 
@@ -292,7 +305,7 @@ module.exports = "<md-list *ngIf=\"movie\">\n  <h1>{{movie.title}}</h1>\n\n  <md
 /***/ 168:
 /***/ (function(module, exports) {
 
-module.exports = "<h1>The most popular movies</h1>\n\n<h2 *ngIf=\"!movies\">loading movies...</h2>\n\n<md-card *ngFor=\"let movie of movies\" class=\"movie-card\">\n  <md-card-header>\n    <md-card-title><h2>{{movie.title}}</h2></md-card-title>\n  </md-card-header>\n  <a routerLink=\"{{movie.id}}\">\n  <img md-card-lg-image src=\"http://image.tmdb.org/t/p/w185/{{movie.poster_path}}\">\n  </a>\n  <md-card-content>\n    <p>{{movie.overview}}</p>\n  </md-card-content>\n  <md-card-actions>\n    <a routerLink=\"{{movie.id}}\" md-button>Details</a>\n  </md-card-actions>\n</md-card>\n"
+module.exports = "<h1>The most popular movies</h1>\n\n<md-card *ngFor=\"let movie of movies\" class=\"movie-card\">\n  <md-card-header>\n    <md-card-title><h2>{{movie.title}}</h2></md-card-title>\n  </md-card-header>\n  <a routerLink=\"{{movie.id}}\">\n  <img md-card-lg-image src=\"http://image.tmdb.org/t/p/w185/{{movie.poster_path}}\">\n  </a>\n  <md-card-content>\n    <p>{{movie.overview}}</p>\n  </md-card-content>\n  <md-card-actions>\n    <a routerLink=\"{{movie.id}}\" md-button>Details</a>\n  </md-card-actions>\n</md-card>\n\n<h2 *ngIf=\"!movies\">loading movies...</h2>\n"
 
 /***/ }),
 

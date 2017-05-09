@@ -9,8 +9,10 @@ import {Http} from "@angular/http";
   styleUrls: ['./movies-list.component.css']
 })
 
+
+
 export class MoviesListComponent implements OnInit {
-  movies: object;
+  movies: Movie[];
 
   constructor(
     private route: ActivatedRoute,
@@ -29,4 +31,11 @@ export class MoviesListComponent implements OnInit {
       );
   }
 
+}
+
+export class Movie{
+  id: number;
+  title: string;
+  poster_path: string;
+  overview: string;
 }
