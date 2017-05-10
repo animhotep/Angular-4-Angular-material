@@ -19,20 +19,19 @@ export class MovieComponent implements OnInit {
   ) {}
 
   ngOnInit() {
+    let url:string;
 
     this.route.params.subscribe(params => {
-     this.id = +params['id'];
+     url = 'https://api.themoviedb.org/3/movie/'+params['id']+'?language=en-US&api_key=e442ad82538a59f2029879dbb2ee3ece';
     });
 
-    this.http.get('https://api.themoviedb.org/3/movie/'+this.id+'?language=en-US&api_key=e442ad82538a59f2029879dbb2ee3ece')
-      .map(res => res.json())
-      .subscribe(
-        data => {
-          this.movie = data;
-          this.titleService.setTitle( this.route.snapshot.data['title'] + data.title );
-        },
-        err => console.log(err)
-      );
+    this.http.get(url).subscribe(
+      data => {
+        this.movie = data.json();
+        this.titleService.setTitle( this.route.snapshot.data['title'] + data.json().title );
+      },
+      err => console.log(err)
+    );
   }
 
 }
