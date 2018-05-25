@@ -9,9 +9,11 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import 'hammerjs';
 import { MoviesListComponent } from './movies-list/movies-list.component';
 import { MovieComponent } from './movie/movie.component';
+import { HomeComponent } from './home/home.component';
 
 
 const routes: Routes = [
+  { path: '',  component: HomeComponent, data: { title: 'Your fresh movies' } },
   { path: 'movies',  component: MoviesListComponent, data: { title: 'Movies list' } },
   { path: 'movies/:id',  component: MovieComponent, data: { title: 'Movie ' }  },
 ];
@@ -21,6 +23,7 @@ const routes: Routes = [
     AppComponent,
     MoviesListComponent,
     MovieComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,
