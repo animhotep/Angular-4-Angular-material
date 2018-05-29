@@ -1,1 +1,1 @@
-/*(?!xml) /index.html 200
+/^(?!.*\.xml$).* /index.html 200
