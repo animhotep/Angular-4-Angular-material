@@ -11,7 +11,8 @@
         "assets",
         "favicon.ico",
         "_redirects",
-        "sitemap.xml"
+        "sitemap.xml",
+        "robots.txt"
       ],
       "index": "index.html",
       "main": "main.ts",

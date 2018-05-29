@@ -1,0 +1,5 @@
+User-agent: *
+Allow: all
+
+Host: yourfreshmovies.tk
+Sitemap: http://yourfreshmovies.tk/sitemap.xml
